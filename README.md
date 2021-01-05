@@ -1,3 +1,3 @@
 # Network Rank
 
-This repository will store all the code developed in R and Python for the project -- Ranking person names in old historic newspaper articles using network structure.
+This repository will store code developed in R and Python for the project -- Ranking person name entities from old historic newspaper articles using network structure.
