@@ -8,6 +8,7 @@ function Extract_First_Line(){
 		echo create\(n:Person {name:\"$person\"}\)\;
         	#echo $person
         done>People.txt
+	echo -e Wrote to People.txt
 }
 
 function Extract_Words(){
@@ -17,7 +18,8 @@ function Extract_Words(){
 	while IFS= read -r line
 	do
 	   [[ "$line" != "" ]] && echo create\(n:n_gram {name:\"$line\"}\)\;
-	done < "$input"
+	done < "$input" >Words.txt
+	echo -e Wrote to file Words.txt
 }
 
 function Return_Person_At_Position(){
@@ -30,7 +32,7 @@ function Return_Person_At_Position(){
 		((Counter=Counter+1))
         	[[ $Position == $Counter ]] && PersonOfInterest=$person
         done
-	echo $PersonOfInterest
+	#echo $PersonOfInterest
 }
 
 function Return_ngram_At_Position(){
@@ -42,9 +44,8 @@ function Return_ngram_At_Position(){
 	while IFS= read -r line
 	do
 		((Counter=Counter+1))
-	   [[ "$line" != "" && $Counter == $Position ]] && echo $line
+	   [[ "$line" != "" && $Counter == $Position ]] && echo $line >> NgramOfInterest.txt
 	done < "$input"
-	echo $NGramOfInterest
 }
 
 function Extract_Relationships(){
@@ -52,25 +53,70 @@ function Extract_Relationships(){
 	Words=$(tail -n +2 mymatrix.txt | sed 's|" |",|g' | sed 's|"||g' )
 	echo $Words | awk '{gsub("[a-z]","\n");gsub(",","");print}' | awk '{$1=$1;print}' > RelationshipScores.txt
 	input="RelationshipScores.txt"
-	
 	while IFS= read -r line
 	do
 	   if [[ "$line" != "" ]]; then 
 		   #for i in $(seq 1 $(cat People.txt | wc -l)); do Return_Person_At_Position $i; done
 		   Values=()
 		   ((RowCounter=RowCounter+1))
-		   echo Row $RowCounter: "$line" 
-		   for val in $line; do
-			   Values+=($val)
-		   done
+		   echo "$line" 
 		   #for i in $(seq 1 $(cat People.txt | wc -l)); do Return_Person_At_Position $i; done
 		   #Return_ngram_At_Position $RowCounter
-		   echo ${Values[@]}
+		   #echo ${Values[@]}
 	   fi
 	done < "$input" > RelationshipScores2.txt
 	mv RelationshipScores2.txt RelationshipScores.txt
-	cat RelationshipScores.txt
+	#cat RelationshipScores.txt
 	#For every row extract each value for each word and assign to person at position
+	input="RelationshipScores.txt"
+	RowCounter=0
+	while IFS= read -r line
+	do
+		((RowCounter=RowCounter+1))
+		echo "$line"
+		Return_ngram_At_Position $RowCounter
+		tail -n 1 NgramOfInterest.txt
+	done < "$input"
+}
+
+function Return_Num_Rows_And_Columns_For_Matrix(){
+	NumCols=$(awk -F'\" ' '{print NF; exit}' mymatrixbackup.txt);
+	NumRows=$(cat mymatrixbackup.txt | wc -l)
+	echo Rows: $NumRows Cols: $NumCols
+}
+function Iterate_Matrix_And_Create_Relationship(){
+
+	input="mymatrixbackup.txt"
+	RowCounter=0
+	while IFS= read -r line
+	do
+		ColCounter=0
+		((RowCounter=RowCounter+1))
+		LineToPrint=$(echo "$line" | cut -d '"' -f1-2 |  sed -e 's/^"//')
+		[[ ${#LineToPrint} -gt 1 ]] && Word=$LineToPrint
+		for item in $(echo $line | cut -d '"' -f3-11); do 
+			((ColCounter=ColCounter+1))
+			[[ ${#item} -gt 3 && $RowCounter -gt 1 ]] && ItemToPrint=$item
+			[[ $Word != "" ]] && echo $Word:$ItemToPrint:$ColCounter 
+
+		done 
+		#Return_ngram_At_Position $RowCounter
+		#tail -n 1 NgramOfInterest.txt
+	done < "$input"> Relationships.txt
+	input="Relationships.txt"
+	RowCounter=0
+	while IFS= read -r line
+	do
+		NGram=$(echo "$line" | cut -d ':' -f1)
+		#NGram=$(echo \'$NGram\')
+		Score=$(echo "$line" | cut -d ':' -f2)
+		PersonNum=$(echo "$line" | cut -d ':' -f3)
+		LineToPrint=$(echo "$line")
+		Return_Person_At_Position $PersonNum
+		#echo -e $NGram : $Score : $PersonNum : $PersonOfInterest
+		#MATCH (n:Person {name:"ann arbor"}),(a:n_gram{name:"city new"}) MERGE (n)-[r:Associated_With {score:52.7543730426974}]->(a)
+		echo -e MATCH \(n:Person {name:\"$PersonOfInterest\"}\),\(a:n_gram{name:\"$NGram\"}\) MERGE \(n\)-[r:Associated_With {score:$Score}]-\>\(a\)\;
+	done < "$input">RelationshipFinalResults.txt
 }
 function Display_Main_Menu(){
 	CYAN='\033[0;36m'
@@ -80,6 +126,7 @@ function Display_Main_Menu(){
 	echo -e "${CYAN}2) Extract First Line from File${NC}"
 	echo -e "${CYAN}3) Extract Words${NC}"
 	echo -e "${CYAN}4) Extract Relationships${NC}"
+	echo -e "${CYAN}5) Create File Relationship Scores${NC}"
 	read -p "Choose an option (Note only enter in integer value):" chosenoption
 	echo "You chose option $chosenoption"
 	re='^[0-9]+$'
@@ -92,7 +139,9 @@ function Display_Main_Menu(){
 		"2") clear && Extract_First_Line;;
 		"3") clear && Extract_Words;;
 		"4") clear && Extract_Relationships;;
-		"5") clear && Return_ngram_At_Position 1;;
+		"5") clear && sed -i ' 1 s/^/&"" /' mymatrixbackup.txt && Iterate_Matrix_And_Create_Relationship;;
+		"6") clear && Return_Num_Rows_And_Columns_For_Matrix;;
+		"7") clear && Iterate_Matrix_And_Create_Relationship;;
 	esac
 }
 Display_Main_Menu
