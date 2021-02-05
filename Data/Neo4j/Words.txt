@@ -1,0 +1,10 @@
+create(n:n_gram {name:"city new"});
+create(n:n_gram {name:"fifth avenue"});
+create(n:n_gram {name:"ill ill"});
+create(n:n_gram {name:"jersey city"});
+create(n:n_gram {name:"last night"});
+create(n:n_gram {name:"last week"});
+create(n:n_gram {name:"last year"});
+create(n:n_gram {name:"new york"});
+create(n:n_gram {name:"yesterday afternoon"});
+create(n:n_gram {name:"york city"});

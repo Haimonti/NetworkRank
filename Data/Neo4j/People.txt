@@ -1,0 +1,10 @@
+create(n:Person {name:"ann arbor"});
+create(n:Person {name:"carrie turner"});
+create(n:Person {name:"j w kelly"});
+create(n:Person {name:"james mccutcheon"});
+create(n:Person {name:"lillian russell"});
+create(n:Person {name:"marie antoinette"});
+create(n:Person {name:"marie jansen"});
+create(n:Person {name:"toledo ann arbor"});
+create(n:Person {name:"van cortlandt"});
+create(n:Person {name:"wilson barrett"});
