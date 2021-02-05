@@ -90,33 +90,48 @@ function Iterate_Matrix_And_Create_Relationship(){
 	RowCounter=0
 	while IFS= read -r line
 	do
-		ColCounter=0
 		((RowCounter=RowCounter+1))
 		LineToPrint=$(echo "$line" | cut -d '"' -f1-2 |  sed -e 's/^"//')
 		[[ ${#LineToPrint} -gt 1 ]] && Word=$LineToPrint
-		for item in $(echo $line | cut -d '"' -f3-11); do 
-			((ColCounter=ColCounter+1))
-			[[ ${#item} -gt 3 && $RowCounter -gt 1 ]] && ItemToPrint=$item
-			[[ $Word != "" ]] && echo $Word:$ItemToPrint:$ColCounter 
+		NGram=$(echo $line | cut -d '"' -f1-2 | sed -e 's/^"//')
+		IFS=', ' read -r -a array <<< $line
+		ColCounter=0
+		for item in $(echo ${array[@]}); do 
+			
+			[[ $item =~ [0-9] ]] && ((ColCounter=ColCounter+1)) && echo $NGram:$item:$ColCounter
+			#[[ ${#item} -gt 3 && $RowCounter -gt 1 ]] && ItemToPrint=$item
+			#[[ $Word != "" && $ItemToPrint =~ [0-9] ]] && echo $Word:$ItemToPrint:$ColCounter 
 
 		done 
-		#Return_ngram_At_Position $RowCounter
-		#tail -n 1 NgramOfInterest.txt
-	done < "$input"> Relationships.txt
-	input="Relationships.txt"
-	RowCounter=0
+	done < "mymatrixbackup.txt" > Relationships.txt
+	
 	while IFS= read -r line
 	do
-		NGram=$(echo "$line" | cut -d ':' -f1)
-		#NGram=$(echo \'$NGram\')
-		Score=$(echo "$line" | cut -d ':' -f2)
-		PersonNum=$(echo "$line" | cut -d ':' -f3)
-		LineToPrint=$(echo "$line")
-		Return_Person_At_Position $PersonNum
-		#echo -e $NGram : $Score : $PersonNum : $PersonOfInterest
-		#MATCH (n:Person {name:"ann arbor"}),(a:n_gram{name:"city new"}) MERGE (n)-[r:Associated_With {score:52.7543730426974}]->(a)
+		NGram=$(echo "$line" | cut -d":" -f1)
+		Score=$(echo "$line" | cut -d":" -f2)
+		PersonNumber=$(echo "$line" | cut -d":" -f3)
+		Return_Person_At_Position $PersonNumber
+		#echo $NGram:$Score:$PersonOfInterest
 		echo -e MATCH \(n:Person {name:\"$PersonOfInterest\"}\),\(a:n_gram{name:\"$NGram\"}\) MERGE \(n\)-[r:Associated_With {score:$Score}]-\>\(a\)\;
-	done < "$input">RelationshipFinalResults.txt
+
+	done < "Relationships.txt" > RelationshipsFinal.txt
+########mv Relationships.txt RelationshipsFinal.txt
+
+########input="RelationshipsFinal.txt"
+########RowCounter=0
+########while IFS= read -r line
+########do
+########	NGram=$(echo "$line" | cut -d ':' -f1)
+########	#NGram=$(echo \'$NGram\')
+########	Score=$(echo "$line" | cut -d ':' -f2)
+########	PersonNum=$(echo "$line" | cut -d ':' -f3)
+########	LineToPrint=$(echo "$line")
+########	Return_Person_At_Position $PersonNum
+########	#echo -e $NGram : $Score : $PersonNum : $PersonOfInterest
+########	[[ $Score != "0" ]] && echo -e MATCH \(n:Person {name:\"$PersonOfInterest\"}\),\(a:n_gram{name:\"$NGram\"}\) MERGE \(n\)-[r:Associated_With {score:$Score}]-\>\(a\)\;
+########done < RelationshipsFinal.txt #> RelationshipFinalResults.txt
+???END
+########echo -e Created file RelationshipFinalResults.txt
 }
 function Display_Main_Menu(){
 	CYAN='\033[0;36m'
