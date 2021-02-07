@@ -6,7 +6,6 @@ function Extract_First_Line(){
 	read -a strarraypeople<<< $People
         for person in ${strarraypeople[@]}; do
 		echo create\(n:Person {name:\"$person\"}\)\;
-        	#echo $person
         done>People.txt
 	echo -e Wrote to People.txt
 }
@@ -32,7 +31,6 @@ function Return_Person_At_Position(){
 		((Counter=Counter+1))
         	[[ $Position == $Counter ]] && PersonOfInterest=$person
         done
-	#echo $PersonOfInterest
 }
 
 function Return_ngram_At_Position(){
@@ -56,36 +54,15 @@ function Extract_Relationships(){
 	while IFS= read -r line
 	do
 	   if [[ "$line" != "" ]]; then 
-		   #for i in $(seq 1 $(cat People.txt | wc -l)); do Return_Person_At_Position $i; done
 		   Values=()
 		   ((RowCounter=RowCounter+1))
 		   echo "$line" 
-		   #for i in $(seq 1 $(cat People.txt | wc -l)); do Return_Person_At_Position $i; done
-		   #Return_ngram_At_Position $RowCounter
-		   #echo ${Values[@]}
 	   fi
 	done < "$input" > RelationshipScores2.txt
 	mv RelationshipScores2.txt RelationshipScores.txt
-	#cat RelationshipScores.txt
-	#For every row extract each value for each word and assign to person at position
-	input="RelationshipScores.txt"
-	RowCounter=0
-	while IFS= read -r line
-	do
-		((RowCounter=RowCounter+1))
-		echo "$line"
-		Return_ngram_At_Position $RowCounter
-		tail -n 1 NgramOfInterest.txt
-	done < "$input"
 }
 
-function Return_Num_Rows_And_Columns_For_Matrix(){
-	NumCols=$(awk -F'\" ' '{print NF; exit}' mymatrixbackup.txt);
-	NumRows=$(cat mymatrixbackup.txt | wc -l)
-	echo Rows: $NumRows Cols: $NumCols
-}
 function Iterate_Matrix_And_Create_Relationship(){
-
 	input="mymatrixbackup.txt"
 	RowCounter=0
 	while IFS= read -r line
@@ -97,11 +74,7 @@ function Iterate_Matrix_And_Create_Relationship(){
 		IFS=', ' read -r -a array <<< $line
 		ColCounter=0
 		for item in $(echo ${array[@]}); do 
-			
 			[[ $item =~ [0-9] ]] && ((ColCounter=ColCounter+1)) && echo $NGram:$item:$ColCounter
-			#[[ ${#item} -gt 3 && $RowCounter -gt 1 ]] && ItemToPrint=$item
-			#[[ $Word != "" && $ItemToPrint =~ [0-9] ]] && echo $Word:$ItemToPrint:$ColCounter 
-
 		done 
 	done < "mymatrixbackup.txt" > Relationships.txt
 	
@@ -111,37 +84,28 @@ function Iterate_Matrix_And_Create_Relationship(){
 		Score=$(echo "$line" | cut -d":" -f2)
 		PersonNumber=$(echo "$line" | cut -d":" -f3)
 		Return_Person_At_Position $PersonNumber
-		#echo $NGram:$Score:$PersonOfInterest
-		echo -e MATCH \(n:Person {name:\"$PersonOfInterest\"}\),\(a:n_gram{name:\"$NGram\"}\) MERGE \(n\)-[r:Associated_With {score:$Score}]-\>\(a\)\;
-
+		[[ $Score != "0" ]] && echo -e MATCH \(n:Person {name:\"$PersonOfInterest\"}\),\(a:n_gram{name:\"$NGram\"}\) MERGE \(n\)-[r:Associated_With {score:$Score}]-\>\(a\)\;
 	done < "Relationships.txt" > RelationshipsFinal.txt
-########mv Relationships.txt RelationshipsFinal.txt
-
-########input="RelationshipsFinal.txt"
-########RowCounter=0
-########while IFS= read -r line
-########do
-########	NGram=$(echo "$line" | cut -d ':' -f1)
-########	#NGram=$(echo \'$NGram\')
-########	Score=$(echo "$line" | cut -d ':' -f2)
-########	PersonNum=$(echo "$line" | cut -d ':' -f3)
-########	LineToPrint=$(echo "$line")
-########	Return_Person_At_Position $PersonNum
-########	#echo -e $NGram : $Score : $PersonNum : $PersonOfInterest
-########	[[ $Score != "0" ]] && echo -e MATCH \(n:Person {name:\"$PersonOfInterest\"}\),\(a:n_gram{name:\"$NGram\"}\) MERGE \(n\)-[r:Associated_With {score:$Score}]-\>\(a\)\;
-########done < RelationshipsFinal.txt #> RelationshipFinalResults.txt
-???END
-########echo -e Created file RelationshipFinalResults.txt
+	echo -e Created File RelationshipsFinal.txt
 }
+
+function Merge_Files_Neo4j(){
+	Green='\033[0;32m'
+	NC='\033[0m'
+	[[ -f "People.txt" ]] && cat People.txt > FinalOutputNeo4j.txt && rm People.txt 
+	[[ -f "Words.txt" ]] && cat Words.txt >> FinalOutputNeo4j.txt && rm Words.txt
+	[[ -f "RelationshipsFinal.txt" ]] && cat RelationshipsFinal.txt >> FinalOutputNeo4j.txt && rm RelationshipsFinal.txt
+	echo -e ${Green} Finished!! ${NC}Created file FinalOutputNeo4j.txt
+}
+
 function Display_Main_Menu(){
 	CYAN='\033[0;36m'
 	NC='\033[0m'
 	clear
 	echo -e "${CYAN}1) Print out File Results${NC}"
-	echo -e "${CYAN}2) Extract First Line from File${NC}"
-	echo -e "${CYAN}3) Extract Words${NC}"
-	echo -e "${CYAN}4) Extract Relationships${NC}"
-	echo -e "${CYAN}5) Create File Relationship Scores${NC}"
+	echo -e "${CYAN}2) Create words and people nodes${NC}"
+	echo -e "${CYAN}3) Extract Relationships and Create File Scores${NC}"
+	echo -e "${CYAN}4) Merge Neo4j files into one file${NC}"
 	read -p "Choose an option (Note only enter in integer value):" chosenoption
 	echo "You chose option $chosenoption"
 	re='^[0-9]+$'
@@ -151,13 +115,9 @@ function Display_Main_Menu(){
 
 	case $chosenoption in
 		"1") clear && cat mymatrix.txt;;
-		"2") clear && Extract_First_Line;;
-		"3") clear && Extract_Words;;
-		"4") clear && Extract_Relationships;;
-		"5") clear && sed -i ' 1 s/^/&"" /' mymatrixbackup.txt && Iterate_Matrix_And_Create_Relationship;;
-		"6") clear && Return_Num_Rows_And_Columns_For_Matrix;;
-		"7") clear && Iterate_Matrix_And_Create_Relationship;;
+		"2") clear && Extract_First_Line && Extract_Words;;
+		"3") clear && Extract_Relationships && sed -i ' 1 s/^/&"" /' mymatrixbackup.txt && Iterate_Matrix_And_Create_Relationship;;
+		"4") clear && Merge_Files_Neo4j;;
 	esac
 }
 Display_Main_Menu
-
