@@ -1,6 +1,5 @@
 #!/bin/bash
 function Extract_First_Line(){
-	#People=$(cat mymatrix.txt | head -n 1)
 	People=$(head -n 1 mymatrix.txt | sed 's|" |",|g' | sed 's|"||g')
 	IFS=','
 	read -a strarraypeople<<< $People
@@ -11,12 +10,12 @@ function Extract_First_Line(){
 }
 
 function Extract_Words(){
-	Words=$(tail -n +2 mymatrix.txt | sed 's|" |",|g' | sed 's|"||g' | cut -d',' -f1)
-	echo $Words | awk '{for (i=1; i<=NF; ++i)printf "%s%s", $i, i % 2? " ": "\n"}i % 2{print ""}' > words.txt
+	tail -n +2 mymatrix.txt | sed 's|" |",|g' | sed 's|"||g' | cut -d',' -f1 | awk '{for (i=1; i<=NF; ++i)printf "%s%s", $i, i % 2? " ": "\n"}i % 2{print ""}' > words.txt
+	WordRank=1
 	input="words.txt"
 	while IFS= read -r line
-	do
-	   [[ "$line" != "" ]] && echo create\(n:n_gram {name:\"$line\"}\)\;
+	do		
+	   [[ "$line" != "" ]] && echo create\(n:n_gram {name:\"$line\"\,Rank:$WordRank}\)\; && ((WordRank=WordRank+1))
 	done < "$input" >Words.txt
 	echo -e Wrote to file Words.txt
 }
@@ -46,21 +45,6 @@ function Return_ngram_At_Position(){
 	done < "$input"
 }
 
-function Extract_Relationships(){
-	RowCounter=0
-	Words=$(tail -n +2 mymatrix.txt | sed 's|" |",|g' | sed 's|"||g' )
-	echo $Words | awk '{gsub("[a-z]","\n");gsub(",","");print}' | awk '{$1=$1;print}' > RelationshipScores.txt
-	input="RelationshipScores.txt"
-	while IFS= read -r line
-	do
-	   if [[ "$line" != "" ]]; then 
-		   Values=()
-		   ((RowCounter=RowCounter+1))
-		   echo "$line" 
-	   fi
-	done < "$input" > RelationshipScores2.txt
-	mv RelationshipScores2.txt RelationshipScores.txt
-}
 
 function Iterate_Matrix_And_Create_Relationship(){
 	input="mymatrixbackup.txt"
@@ -77,7 +61,6 @@ function Iterate_Matrix_And_Create_Relationship(){
 			[[ $item =~ [0-9] ]] && ((ColCounter=ColCounter+1)) && echo $NGram:$item:$ColCounter
 		done 
 	done < "mymatrixbackup.txt" > Relationships.txt
-	
 	while IFS= read -r line
 	do
 		NGram=$(echo "$line" | cut -d":" -f1)
@@ -94,7 +77,9 @@ function Merge_Files_Neo4j(){
 	NC='\033[0m'
 	[[ -f "People.txt" ]] && cat People.txt > FinalOutputNeo4j.txt && rm People.txt 
 	[[ -f "Words.txt" ]] && cat Words.txt >> FinalOutputNeo4j.txt && rm Words.txt
+	[[ -f "words.txt" ]] && rm words.txt
 	[[ -f "RelationshipsFinal.txt" ]] && cat RelationshipsFinal.txt >> FinalOutputNeo4j.txt && rm RelationshipsFinal.txt
+	[[ -f "Relationships.txt" ]] && rm Relationships.txt
 	echo -e ${Green} Finished!! ${NC}Created file FinalOutputNeo4j.txt
 }
 
@@ -116,7 +101,8 @@ function Display_Main_Menu(){
 	case $chosenoption in
 		"1") clear && cat mymatrix.txt;;
 		"2") clear && Extract_First_Line && Extract_Words;;
-		"3") clear && Extract_Relationships && sed -i ' 1 s/^/&"" /' mymatrixbackup.txt && Iterate_Matrix_And_Create_Relationship;;
+		#"3") clear && Extract_Relationships && sed -i ' 1 s/^/&"" /' mymatrixbackup.txt && Iterate_Matrix_And_Create_Relationship;;
+		"3") clear && sed -i ' 1 s/^/&"" /' mymatrixbackup.txt && Iterate_Matrix_And_Create_Relationship;;
 		"4") clear && Merge_Files_Neo4j;;
 	esac
 }
