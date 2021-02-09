@@ -32,18 +32,29 @@ write.table(inspect(tdmSparseTermsRemoved[1:27,1:36501]), file="mymatrix.txt")
 
 #Perform Birank
 df=inspect(tdmSparseTermsRemoved[1:27,1:36501])
-df = as.data.frame(df, row.names=TRUE)
+#df = as.data.frame(df, row.names=TRUE)
+#Extract the names
+rownames(df[1:10,1:10])
+colnames(df[1:10,1:10])
+
+df[,"ann arbor"]
+for (name in colnames(df[1:10,1:10])){
+  for (val in df[,name]){
+    if(val != 0) {
+      cat(val,": T ")
+    }else{
+        cat(val," F ")
+      }
+  }
+  #print(df[,name])
+}
+
+#df[1:10,1][1:10]
+#Extract the ngram names
 br_birank(df)
 df2 <- data.table(
   patient_id = sample(x = 1:10000, size = 10000, replace = TRUE),
   provider_id = sample(x = 1:5000, size = 10000, replace = TRUE)
 )
 br_birank(df2)
-#tdmMatrix <- as.matrix(tdmSparseTermsRemoved)
-
-#output_dtm()
-#write.csv(tdmMatrix, 'myfile.csv')
-#write.table(tdmMatrix, file="mymatrix.txt")
-#dfTDM=as.data.frame(inspect(tdmSparseTermsRemoved[1:27,1:36501]))
-#tdmMatrix
 
