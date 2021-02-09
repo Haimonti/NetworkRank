@@ -3,6 +3,7 @@ library(tm)
 library(data.table)
 library(gofastr)
 library(tidyverse)
+library(birankr)
 
 path2="~/Projects/ProjectDrDuttaPersonal/Anchal/name_token_data.csv"
 x = read.csv(path2, header = TRUE)
@@ -24,10 +25,20 @@ tdmSparseTermsRemoved = removeSparseTerms(tdm, 0.95)
 tdmSparseTermsRemoved
 
 #ap_td %>%cast_dfm(term, document, count)
+
 inspect(tdmSparseTermsRemoved[1:27,1:36501])
 setwd("~/Projects/ProjectDrDuttaPersonal/R_Scripts")
 write.table(inspect(tdmSparseTermsRemoved[1:27,1:36501]), file="mymatrix.txt")
 
+#Perform Birank
+df=inspect(tdmSparseTermsRemoved[1:27,1:36501])
+df = as.data.frame(df, row.names=TRUE)
+br_birank(df)
+df2 <- data.table(
+  patient_id = sample(x = 1:10000, size = 10000, replace = TRUE),
+  provider_id = sample(x = 1:5000, size = 10000, replace = TRUE)
+)
+br_birank(df2)
 #tdmMatrix <- as.matrix(tdmSparseTermsRemoved)
 
 #output_dtm()
