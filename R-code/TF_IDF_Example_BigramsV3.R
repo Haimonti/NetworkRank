@@ -35,7 +35,7 @@ setwd("/media/sean/easystore/ProjectDrDuttaPersonal/R_Scripts")
 file="mymatrix.txt"
 tbl_names=read.table(file, nrows=1, header = FALSE, sep = " ", dec = ".")
 tbl=read.table(file, skip=1, header = FALSE, sep = " ", dec = ".")
-
+rm(file)
 lst_names=as.list(tbl_names)
 lst_names=prepend(lst_names,"N-Gram")
 colnames(tbl)=c(lst_names)
@@ -61,27 +61,38 @@ for (i in colnames(df_tbl)){
 }
 rm(tbl, tbl_names, i, lst_colnames, counter)
 lst_names[1]<- NULL
+lst_names_for_anal<- list()
+lst_values_for_anal<- list()
+
+number_of_names=length(lst_names)
+lst_person_id<- list()
+
 for (rowname in lst_rownames){
-  #print("ROW: "+as.String(rowname))
+ 
   counter=0
+  personcounter=number_of_names
   for (val in get(eval(rowname))){
     counter=counter+1
     if(val == 1){
-      print(as.String(lst_names[counter])+":"+as.String(rowname))
+      print(as.String(lst_names[counter])+":"+as.String(counter)+":RowName "+as.String(rowname))
+      append(eval(as.String(lst_names[counter])),counter)
+      if(! exists(as.String(lst_names[counter]))){
+        assign(as.String(lst_names[counter]), personcounter+counter)
+      }
+      lst_names_for_anal=append(eval(as.String(lst_names[counter])), lst_names_for_anal)
+      lst_values_for_anal=append(as.integer(counter), lst_values_for_anal)
     }
   }
 }
 
+df2 <- data.table(person_id=unlist(lst_names_for_anal), ngram_id=unlist(lst_values_for_anal))
 
 #Perform Birank
-#df=inspect(tdmSparseTermsRemoved[1:27,1:36501])
-
-#rownames(df[1:10,1:10])
-#colnames(df[1:10,1:10])
+br_birank(df2)
 
 #TEST
 #Extract the ngram names
-br_birank(df)
+#br_birank(df)
 df2 <- data.table(
   patient_id = sample(x = 1:10000, size = 10000, replace = TRUE),
   provider_id = sample(x = 1:5000, size = 10000, replace = TRUE)
