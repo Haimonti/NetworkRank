@@ -1,0 +1,458 @@
+Document: ID=stella wash.txt (1 sentences, 209 tokens)
+
+Sentence #1 (209 tokens):
+vlist clialtf will or welcomed by the sharper who tax the northern iurlnr washington nov pilot chart of the north pacific ocean was issued from the lljtlro graphics office today this publication was authorized the last season of congress and intended to aid western mariners as those of the east are assisted by the north atlantic chair the latter publication has reached it high state of perfection through the cooperation of blood observers on the pacific foot lo beginning ha been mode in the great stretch of 1500 miles between han francisco and yokohama every obtainable bit of information interesting to nav1latur given with exceeding ulcer of de tail for instance single floating how indicated about 300 miles north of who hawaiian ulanda located from report made by passing yes set dated in september dangerous defelice is thownoff the japanese unit and number of menace to navigation appear near the cali forbid coast large raft containing 10000 is each averaging fit feet in length and inches in diameter which was being lowed from stella wash to sin franelseo began breaking up its gale and was finally abandoned on oct 10 according to lit reports hadnntrong part northern drift and it will probably igni must ahora of vancouver island really
+
+Tokens:
+[Text=vlist CharacterOffsetBegin=1 CharacterOffsetEnd=6 PartOfSpeech=JJ Lemma=vlist NamedEntityTag=O]
+[Text=clialtf CharacterOffsetBegin=7 CharacterOffsetEnd=14 PartOfSpeech=NN Lemma=clialtf NamedEntityTag=O]
+[Text=will CharacterOffsetBegin=15 CharacterOffsetEnd=19 PartOfSpeech=MD Lemma=will NamedEntityTag=O]
+[Text=or CharacterOffsetBegin=20 CharacterOffsetEnd=22 PartOfSpeech=CC Lemma=or NamedEntityTag=O]
+[Text=welcomed CharacterOffsetBegin=23 CharacterOffsetEnd=31 PartOfSpeech=VBN Lemma=welcome NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=35 CharacterOffsetEnd=38 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=sharper CharacterOffsetBegin=39 CharacterOffsetEnd=46 PartOfSpeech=JJR Lemma=sharper NamedEntityTag=O]
+[Text=who CharacterOffsetBegin=47 CharacterOffsetEnd=50 PartOfSpeech=WP Lemma=who NamedEntityTag=O]
+[Text=tax CharacterOffsetBegin=51 CharacterOffsetEnd=54 PartOfSpeech=VBP Lemma=tax NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=northern CharacterOffsetBegin=59 CharacterOffsetEnd=67 PartOfSpeech=JJ Lemma=northern NamedEntityTag=O]
+[Text=iurlnr CharacterOffsetBegin=68 CharacterOffsetEnd=74 PartOfSpeech=NN Lemma=iurlnr NamedEntityTag=O]
+[Text=washington CharacterOffsetBegin=75 CharacterOffsetEnd=85 PartOfSpeech=NN Lemma=washington NamedEntityTag=STATE_OR_PROVINCE]
+[Text=nov CharacterOffsetBegin=86 CharacterOffsetEnd=89 PartOfSpeech=NNP Lemma=nov NamedEntityTag=DATE NormalizedNamedEntityTag=XXXX-11 Timex=<TIMEX3 tid="t1" type="DATE" value="XXXX-11">nov</TIMEX3>]
+[Text=pilot CharacterOffsetBegin=90 CharacterOffsetEnd=95 PartOfSpeech=NN Lemma=pilot NamedEntityTag=TITLE]
+[Text=chart CharacterOffsetBegin=96 CharacterOffsetEnd=101 PartOfSpeech=NN Lemma=chart NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=102 CharacterOffsetEnd=104 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=105 CharacterOffsetEnd=108 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=north CharacterOffsetBegin=109 CharacterOffsetEnd=114 PartOfSpeech=NN Lemma=north NamedEntityTag=O]
+[Text=pacific CharacterOffsetBegin=115 CharacterOffsetEnd=122 PartOfSpeech=JJ Lemma=pacific NamedEntityTag=O]
+[Text=ocean CharacterOffsetBegin=123 CharacterOffsetEnd=128 PartOfSpeech=NN Lemma=ocean NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=129 CharacterOffsetEnd=132 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=issued CharacterOffsetBegin=133 CharacterOffsetEnd=139 PartOfSpeech=VBN Lemma=issue NamedEntityTag=O]
+[Text=from CharacterOffsetBegin=140 CharacterOffsetEnd=144 PartOfSpeech=IN Lemma=from NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=145 CharacterOffsetEnd=148 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=lljtlro CharacterOffsetBegin=149 CharacterOffsetEnd=156 PartOfSpeech=JJ Lemma=lljtlro NamedEntityTag=O]
+[Text=graphics CharacterOffsetBegin=157 CharacterOffsetEnd=165 PartOfSpeech=NNS Lemma=graphic NamedEntityTag=O]
+[Text=office CharacterOffsetBegin=166 CharacterOffsetEnd=172 PartOfSpeech=NN Lemma=office NamedEntityTag=O]
+[Text=today CharacterOffsetBegin=173 CharacterOffsetEnd=178 PartOfSpeech=NN Lemma=today NamedEntityTag=DATE NormalizedNamedEntityTag=THIS P1D Timex=<TIMEX3 alt_value="THIS P1D" anchorTimeID="t0" temporalFunction="true" tid="t2" type="DATE" valueFromFunction="tf0">today</TIMEX3>]
+[Text=this CharacterOffsetBegin=179 CharacterOffsetEnd=183 PartOfSpeech=DT Lemma=this NamedEntityTag=O]
+[Text=publication CharacterOffsetBegin=184 CharacterOffsetEnd=195 PartOfSpeech=NN Lemma=publication NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=196 CharacterOffsetEnd=199 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=authorized CharacterOffsetBegin=200 CharacterOffsetEnd=210 PartOfSpeech=VBN Lemma=authorize NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=211 CharacterOffsetEnd=214 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=last CharacterOffsetBegin=215 CharacterOffsetEnd=219 PartOfSpeech=JJ Lemma=last NamedEntityTag=O]
+[Text=season CharacterOffsetBegin=220 CharacterOffsetEnd=226 PartOfSpeech=NN Lemma=season NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=227 CharacterOffsetEnd=229 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=congress CharacterOffsetBegin=230 CharacterOffsetEnd=238 PartOfSpeech=NN Lemma=congress NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=239 CharacterOffsetEnd=242 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=intended CharacterOffsetBegin=243 CharacterOffsetEnd=251 PartOfSpeech=VBN Lemma=intend NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=252 CharacterOffsetEnd=254 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=aid CharacterOffsetBegin=255 CharacterOffsetEnd=258 PartOfSpeech=VB Lemma=aid NamedEntityTag=O]
+[Text=western CharacterOffsetBegin=259 CharacterOffsetEnd=266 PartOfSpeech=JJ Lemma=western NamedEntityTag=O]
+[Text=mariners CharacterOffsetBegin=267 CharacterOffsetEnd=275 PartOfSpeech=NNS Lemma=mariner NamedEntityTag=O]
+[Text=as CharacterOffsetBegin=276 CharacterOffsetEnd=278 PartOfSpeech=IN Lemma=as NamedEntityTag=O]
+[Text=those CharacterOffsetBegin=279 CharacterOffsetEnd=284 PartOfSpeech=DT Lemma=those NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=285 CharacterOffsetEnd=287 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=288 CharacterOffsetEnd=291 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=east CharacterOffsetBegin=292 CharacterOffsetEnd=296 PartOfSpeech=NN Lemma=east NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=297 CharacterOffsetEnd=300 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=assisted CharacterOffsetBegin=301 CharacterOffsetEnd=309 PartOfSpeech=VBN Lemma=assist NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=310 CharacterOffsetEnd=312 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=313 CharacterOffsetEnd=316 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=north CharacterOffsetBegin=317 CharacterOffsetEnd=322 PartOfSpeech=NN Lemma=north NamedEntityTag=O]
+[Text=atlantic CharacterOffsetBegin=323 CharacterOffsetEnd=331 PartOfSpeech=JJ Lemma=atlantic NamedEntityTag=O]
+[Text=chair CharacterOffsetBegin=332 CharacterOffsetEnd=337 PartOfSpeech=NN Lemma=chair NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=338 CharacterOffsetEnd=341 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=latter CharacterOffsetBegin=342 CharacterOffsetEnd=348 PartOfSpeech=JJ Lemma=latter NamedEntityTag=O]
+[Text=publication CharacterOffsetBegin=349 CharacterOffsetEnd=360 PartOfSpeech=NN Lemma=publication NamedEntityTag=O]
+[Text=has CharacterOffsetBegin=361 CharacterOffsetEnd=364 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=reached CharacterOffsetBegin=365 CharacterOffsetEnd=372 PartOfSpeech=VBN Lemma=reach NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=373 CharacterOffsetEnd=375 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=high CharacterOffsetBegin=376 CharacterOffsetEnd=380 PartOfSpeech=JJ Lemma=high NamedEntityTag=O]
+[Text=state CharacterOffsetBegin=381 CharacterOffsetEnd=386 PartOfSpeech=NN Lemma=state NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=387 CharacterOffsetEnd=389 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=perfection CharacterOffsetBegin=390 CharacterOffsetEnd=400 PartOfSpeech=NN Lemma=perfection NamedEntityTag=O]
+[Text=through CharacterOffsetBegin=401 CharacterOffsetEnd=408 PartOfSpeech=IN Lemma=through NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=409 CharacterOffsetEnd=412 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=cooperation CharacterOffsetBegin=413 CharacterOffsetEnd=424 PartOfSpeech=NN Lemma=cooperation NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=425 CharacterOffsetEnd=427 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=blood CharacterOffsetBegin=428 CharacterOffsetEnd=433 PartOfSpeech=NN Lemma=blood NamedEntityTag=O]
+[Text=observers CharacterOffsetBegin=434 CharacterOffsetEnd=443 PartOfSpeech=NNS Lemma=observer NamedEntityTag=O]
+[Text=on CharacterOffsetBegin=444 CharacterOffsetEnd=446 PartOfSpeech=IN Lemma=on NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=447 CharacterOffsetEnd=450 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=pacific CharacterOffsetBegin=451 CharacterOffsetEnd=458 PartOfSpeech=JJ Lemma=pacific NamedEntityTag=O]
+[Text=foot CharacterOffsetBegin=459 CharacterOffsetEnd=463 PartOfSpeech=NN Lemma=foot NamedEntityTag=O]
+[Text=lo CharacterOffsetBegin=464 CharacterOffsetEnd=466 PartOfSpeech=NN Lemma=lo NamedEntityTag=O]
+[Text=beginning CharacterOffsetBegin=467 CharacterOffsetEnd=476 PartOfSpeech=VBG Lemma=begin NamedEntityTag=O]
+[Text=ha CharacterOffsetBegin=477 CharacterOffsetEnd=479 PartOfSpeech=UH Lemma=ha NamedEntityTag=O]
+[Text=been CharacterOffsetBegin=480 CharacterOffsetEnd=484 PartOfSpeech=VBN Lemma=be NamedEntityTag=O]
+[Text=mode CharacterOffsetBegin=485 CharacterOffsetEnd=489 PartOfSpeech=NN Lemma=mode NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=490 CharacterOffsetEnd=492 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=493 CharacterOffsetEnd=496 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=great CharacterOffsetBegin=497 CharacterOffsetEnd=502 PartOfSpeech=JJ Lemma=great NamedEntityTag=O]
+[Text=stretch CharacterOffsetBegin=503 CharacterOffsetEnd=510 PartOfSpeech=NN Lemma=stretch NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=511 CharacterOffsetEnd=513 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=1500 CharacterOffsetBegin=514 CharacterOffsetEnd=518 PartOfSpeech=CD Lemma=1500 NamedEntityTag=DATE NormalizedNamedEntityTag=1500]
+[Text=miles CharacterOffsetBegin=519 CharacterOffsetEnd=524 PartOfSpeech=NNS Lemma=mile NamedEntityTag=O]
+[Text=between CharacterOffsetBegin=525 CharacterOffsetEnd=532 PartOfSpeech=IN Lemma=between NamedEntityTag=O]
+[Text=han CharacterOffsetBegin=533 CharacterOffsetEnd=536 PartOfSpeech=NNP Lemma=han NamedEntityTag=O]
+[Text=francisco CharacterOffsetBegin=537 CharacterOffsetEnd=546 PartOfSpeech=NNP Lemma=francisco NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=547 CharacterOffsetEnd=550 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=yokohama CharacterOffsetBegin=551 CharacterOffsetEnd=559 PartOfSpeech=NNP Lemma=yokohama NamedEntityTag=O]
+[Text=every CharacterOffsetBegin=560 CharacterOffsetEnd=565 PartOfSpeech=DT Lemma=every NamedEntityTag=O]
+[Text=obtainable CharacterOffsetBegin=566 CharacterOffsetEnd=576 PartOfSpeech=JJ Lemma=obtainable NamedEntityTag=O]
+[Text=bit CharacterOffsetBegin=577 CharacterOffsetEnd=580 PartOfSpeech=NN Lemma=bit NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=581 CharacterOffsetEnd=583 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=information CharacterOffsetBegin=584 CharacterOffsetEnd=595 PartOfSpeech=NN Lemma=information NamedEntityTag=O]
+[Text=interesting CharacterOffsetBegin=596 CharacterOffsetEnd=607 PartOfSpeech=JJ Lemma=interesting NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=608 CharacterOffsetEnd=610 PartOfSpeech=IN Lemma=to NamedEntityTag=O]
+[Text=nav1latur CharacterOffsetBegin=611 CharacterOffsetEnd=620 PartOfSpeech=NN Lemma=nav1latur NamedEntityTag=O]
+[Text=given CharacterOffsetBegin=621 CharacterOffsetEnd=626 PartOfSpeech=VBN Lemma=give NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=627 CharacterOffsetEnd=631 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+[Text=exceeding CharacterOffsetBegin=632 CharacterOffsetEnd=641 PartOfSpeech=VBG Lemma=exceed NamedEntityTag=O]
+[Text=ulcer CharacterOffsetBegin=642 CharacterOffsetEnd=647 PartOfSpeech=NN Lemma=ulcer NamedEntityTag=CAUSE_OF_DEATH]
+[Text=of CharacterOffsetBegin=648 CharacterOffsetEnd=650 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=de CharacterOffsetBegin=651 CharacterOffsetEnd=653 PartOfSpeech=NNP Lemma=de NamedEntityTag=O]
+[Text=tail CharacterOffsetBegin=654 CharacterOffsetEnd=658 PartOfSpeech=NN Lemma=tail NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=659 CharacterOffsetEnd=662 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=instance CharacterOffsetBegin=663 CharacterOffsetEnd=671 PartOfSpeech=NN Lemma=instance NamedEntityTag=O]
+[Text=single CharacterOffsetBegin=672 CharacterOffsetEnd=678 PartOfSpeech=JJ Lemma=single NamedEntityTag=O]
+[Text=floating CharacterOffsetBegin=679 CharacterOffsetEnd=687 PartOfSpeech=VBG Lemma=float NamedEntityTag=O]
+[Text=how CharacterOffsetBegin=688 CharacterOffsetEnd=691 PartOfSpeech=WRB Lemma=how NamedEntityTag=O]
+[Text=indicated CharacterOffsetBegin=692 CharacterOffsetEnd=701 PartOfSpeech=VBD Lemma=indicate NamedEntityTag=O]
+[Text=about CharacterOffsetBegin=702 CharacterOffsetEnd=707 PartOfSpeech=IN Lemma=about NamedEntityTag=O]
+[Text=300 CharacterOffsetBegin=708 CharacterOffsetEnd=711 PartOfSpeech=CD Lemma=300 NamedEntityTag=NUMBER NormalizedNamedEntityTag=~300.0]
+[Text=miles CharacterOffsetBegin=712 CharacterOffsetEnd=717 PartOfSpeech=NNS Lemma=mile NamedEntityTag=O]
+[Text=north CharacterOffsetBegin=718 CharacterOffsetEnd=723 PartOfSpeech=RB Lemma=north NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=724 CharacterOffsetEnd=726 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=who CharacterOffsetBegin=727 CharacterOffsetEnd=730 PartOfSpeech=WP Lemma=who NamedEntityTag=O]
+[Text=hawaiian CharacterOffsetBegin=731 CharacterOffsetEnd=739 PartOfSpeech=JJ Lemma=hawaiian NamedEntityTag=O]
+[Text=ulanda CharacterOffsetBegin=740 CharacterOffsetEnd=746 PartOfSpeech=NN Lemma=ulanda NamedEntityTag=O]
+[Text=located CharacterOffsetBegin=747 CharacterOffsetEnd=754 PartOfSpeech=VBN Lemma=locate NamedEntityTag=O]
+[Text=from CharacterOffsetBegin=755 CharacterOffsetEnd=759 PartOfSpeech=IN Lemma=from NamedEntityTag=O]
+[Text=report CharacterOffsetBegin=760 CharacterOffsetEnd=766 PartOfSpeech=NN Lemma=report NamedEntityTag=O]
+[Text=made CharacterOffsetBegin=767 CharacterOffsetEnd=771 PartOfSpeech=VBN Lemma=make NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=772 CharacterOffsetEnd=774 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=passing CharacterOffsetBegin=775 CharacterOffsetEnd=782 PartOfSpeech=VBG Lemma=pass NamedEntityTag=O]
+[Text=yes CharacterOffsetBegin=783 CharacterOffsetEnd=786 PartOfSpeech=RB Lemma=yes NamedEntityTag=O]
+[Text=set CharacterOffsetBegin=787 CharacterOffsetEnd=790 PartOfSpeech=VBN Lemma=set NamedEntityTag=O]
+[Text=dated CharacterOffsetBegin=791 CharacterOffsetEnd=796 PartOfSpeech=VBN Lemma=date NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=797 CharacterOffsetEnd=799 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=september CharacterOffsetBegin=800 CharacterOffsetEnd=809 PartOfSpeech=NNP Lemma=september NamedEntityTag=DATE NormalizedNamedEntityTag=XXXX-09 Timex=<TIMEX3 tid="t3" type="DATE" value="XXXX-09">september</TIMEX3>]
+[Text=dangerous CharacterOffsetBegin=810 CharacterOffsetEnd=819 PartOfSpeech=JJ Lemma=dangerous NamedEntityTag=O]
+[Text=defelice CharacterOffsetBegin=820 CharacterOffsetEnd=828 PartOfSpeech=NN Lemma=defelice NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=829 CharacterOffsetEnd=831 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=thownoff CharacterOffsetBegin=832 CharacterOffsetEnd=840 PartOfSpeech=NN Lemma=thownoff NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=841 CharacterOffsetEnd=844 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=japanese CharacterOffsetBegin=845 CharacterOffsetEnd=853 PartOfSpeech=JJ Lemma=japanese NamedEntityTag=NATIONALITY]
+[Text=unit CharacterOffsetBegin=854 CharacterOffsetEnd=858 PartOfSpeech=NN Lemma=unit NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=859 CharacterOffsetEnd=862 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=number CharacterOffsetBegin=863 CharacterOffsetEnd=869 PartOfSpeech=NN Lemma=number NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=870 CharacterOffsetEnd=872 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=menace CharacterOffsetBegin=873 CharacterOffsetEnd=879 PartOfSpeech=NN Lemma=menace NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=880 CharacterOffsetEnd=882 PartOfSpeech=IN Lemma=to NamedEntityTag=O]
+[Text=navigation CharacterOffsetBegin=883 CharacterOffsetEnd=893 PartOfSpeech=NN Lemma=navigation NamedEntityTag=O]
+[Text=appear CharacterOffsetBegin=894 CharacterOffsetEnd=900 PartOfSpeech=VBP Lemma=appear NamedEntityTag=O]
+[Text=near CharacterOffsetBegin=901 CharacterOffsetEnd=905 PartOfSpeech=IN Lemma=near NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=906 CharacterOffsetEnd=909 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=cali CharacterOffsetBegin=910 CharacterOffsetEnd=914 PartOfSpeech=NNP Lemma=cali NamedEntityTag=MISC]
+[Text=forbid CharacterOffsetBegin=915 CharacterOffsetEnd=921 PartOfSpeech=VB Lemma=forbid NamedEntityTag=O]
+[Text=coast CharacterOffsetBegin=922 CharacterOffsetEnd=927 PartOfSpeech=NN Lemma=coast NamedEntityTag=O]
+[Text=large CharacterOffsetBegin=928 CharacterOffsetEnd=933 PartOfSpeech=JJ Lemma=large NamedEntityTag=O]
+[Text=raft CharacterOffsetBegin=934 CharacterOffsetEnd=938 PartOfSpeech=NN Lemma=raft NamedEntityTag=O]
+[Text=containing CharacterOffsetBegin=939 CharacterOffsetEnd=949 PartOfSpeech=VBG Lemma=contain NamedEntityTag=O]
+[Text=10000 CharacterOffsetBegin=950 CharacterOffsetEnd=955 PartOfSpeech=CD Lemma=10000 NamedEntityTag=NUMBER NormalizedNamedEntityTag=10000.0]
+[Text=is CharacterOffsetBegin=956 CharacterOffsetEnd=958 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=each CharacterOffsetBegin=959 CharacterOffsetEnd=963 PartOfSpeech=DT Lemma=each NamedEntityTag=O]
+[Text=averaging CharacterOffsetBegin=964 CharacterOffsetEnd=973 PartOfSpeech=VBG Lemma=average NamedEntityTag=O]
+[Text=fit CharacterOffsetBegin=974 CharacterOffsetEnd=977 PartOfSpeech=JJ Lemma=fit NamedEntityTag=O]
+[Text=feet CharacterOffsetBegin=978 CharacterOffsetEnd=982 PartOfSpeech=NNS Lemma=foot NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=983 CharacterOffsetEnd=985 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=length CharacterOffsetBegin=986 CharacterOffsetEnd=992 PartOfSpeech=NN Lemma=length NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=993 CharacterOffsetEnd=996 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=inches CharacterOffsetBegin=997 CharacterOffsetEnd=1003 PartOfSpeech=NNS Lemma=inch NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=1004 CharacterOffsetEnd=1006 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=diameter CharacterOffsetBegin=1007 CharacterOffsetEnd=1015 PartOfSpeech=NN Lemma=diameter NamedEntityTag=O]
+[Text=which CharacterOffsetBegin=1016 CharacterOffsetEnd=1021 PartOfSpeech=WDT Lemma=which NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=1022 CharacterOffsetEnd=1025 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=being CharacterOffsetBegin=1026 CharacterOffsetEnd=1031 PartOfSpeech=VBG Lemma=be NamedEntityTag=O]
+[Text=lowed CharacterOffsetBegin=1032 CharacterOffsetEnd=1037 PartOfSpeech=VBN Lemma=low NamedEntityTag=O]
+[Text=from CharacterOffsetBegin=1038 CharacterOffsetEnd=1042 PartOfSpeech=IN Lemma=from NamedEntityTag=O]
+[Text=stella CharacterOffsetBegin=1043 CharacterOffsetEnd=1049 PartOfSpeech=JJ Lemma=stella NamedEntityTag=O]
+[Text=wash CharacterOffsetBegin=1050 CharacterOffsetEnd=1054 PartOfSpeech=NN Lemma=wash NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=1055 CharacterOffsetEnd=1057 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=sin CharacterOffsetBegin=1058 CharacterOffsetEnd=1061 PartOfSpeech=VB Lemma=sin NamedEntityTag=O]
+[Text=franelseo CharacterOffsetBegin=1062 CharacterOffsetEnd=1071 PartOfSpeech=NN Lemma=franelseo NamedEntityTag=O]
+[Text=began CharacterOffsetBegin=1072 CharacterOffsetEnd=1077 PartOfSpeech=VBD Lemma=begin NamedEntityTag=O]
+[Text=breaking CharacterOffsetBegin=1078 CharacterOffsetEnd=1086 PartOfSpeech=VBG Lemma=break NamedEntityTag=O]
+[Text=up CharacterOffsetBegin=1087 CharacterOffsetEnd=1089 PartOfSpeech=RP Lemma=up NamedEntityTag=O]
+[Text=its CharacterOffsetBegin=1090 CharacterOffsetEnd=1093 PartOfSpeech=PRP$ Lemma=its NamedEntityTag=O]
+[Text=gale CharacterOffsetBegin=1094 CharacterOffsetEnd=1098 PartOfSpeech=NN Lemma=gale NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=1099 CharacterOffsetEnd=1102 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=1103 CharacterOffsetEnd=1106 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=finally CharacterOffsetBegin=1107 CharacterOffsetEnd=1114 PartOfSpeech=RB Lemma=finally NamedEntityTag=O]
+[Text=abandoned CharacterOffsetBegin=1115 CharacterOffsetEnd=1124 PartOfSpeech=VBN Lemma=abandon NamedEntityTag=O]
+[Text=on CharacterOffsetBegin=1125 CharacterOffsetEnd=1127 PartOfSpeech=IN Lemma=on NamedEntityTag=O]
+[Text=oct CharacterOffsetBegin=1128 CharacterOffsetEnd=1131 PartOfSpeech=NN Lemma=oct NamedEntityTag=DATE NormalizedNamedEntityTag=XXXX-10-10 Timex=<TIMEX3 tid="t4" type="DATE" value="XXXX-10-10">oct 10</TIMEX3>]
+[Text=10 CharacterOffsetBegin=1132 CharacterOffsetEnd=1134 PartOfSpeech=CD Lemma=10 NamedEntityTag=DATE NormalizedNamedEntityTag=XXXX-10-10 Timex=<TIMEX3 tid="t4" type="DATE" value="XXXX-10-10">oct 10</TIMEX3>]
+[Text=according CharacterOffsetBegin=1135 CharacterOffsetEnd=1144 PartOfSpeech=VBG Lemma=accord NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=1145 CharacterOffsetEnd=1147 PartOfSpeech=IN Lemma=to NamedEntityTag=O]
+[Text=lit CharacterOffsetBegin=1148 CharacterOffsetEnd=1151 PartOfSpeech=VBN Lemma=light NamedEntityTag=O]
+[Text=reports CharacterOffsetBegin=1152 CharacterOffsetEnd=1159 PartOfSpeech=NNS Lemma=report NamedEntityTag=O]
+[Text=hadnntrong CharacterOffsetBegin=1160 CharacterOffsetEnd=1170 PartOfSpeech=VBP Lemma=hadnntrong NamedEntityTag=O]
+[Text=part CharacterOffsetBegin=1171 CharacterOffsetEnd=1175 PartOfSpeech=NN Lemma=part NamedEntityTag=O]
+[Text=northern CharacterOffsetBegin=1176 CharacterOffsetEnd=1184 PartOfSpeech=JJ Lemma=northern NamedEntityTag=O]
+[Text=drift CharacterOffsetBegin=1185 CharacterOffsetEnd=1190 PartOfSpeech=NN Lemma=drift NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=1191 CharacterOffsetEnd=1194 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=1195 CharacterOffsetEnd=1197 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=will CharacterOffsetBegin=1198 CharacterOffsetEnd=1202 PartOfSpeech=MD Lemma=will NamedEntityTag=O]
+[Text=probably CharacterOffsetBegin=1203 CharacterOffsetEnd=1211 PartOfSpeech=RB Lemma=probably NamedEntityTag=O]
+[Text=igni CharacterOffsetBegin=1212 CharacterOffsetEnd=1216 PartOfSpeech=VB Lemma=igni NamedEntityTag=O]
+[Text=must CharacterOffsetBegin=1217 CharacterOffsetEnd=1221 PartOfSpeech=MD Lemma=must NamedEntityTag=O]
+[Text=ahora CharacterOffsetBegin=1222 CharacterOffsetEnd=1227 PartOfSpeech=VB Lemma=ahora NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=1228 CharacterOffsetEnd=1230 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=vancouver CharacterOffsetBegin=1231 CharacterOffsetEnd=1240 PartOfSpeech=NNP Lemma=vancouver NamedEntityTag=O]
+[Text=island CharacterOffsetBegin=1241 CharacterOffsetEnd=1247 PartOfSpeech=NN Lemma=island NamedEntityTag=O]
+[Text=really CharacterOffsetBegin=1248 CharacterOffsetEnd=1254 PartOfSpeech=RB Lemma=really NamedEntityTag=O]
+
+Dependency Parse (enhanced plus plus dependencies):
+root(ROOT-0, issued-24)
+amod(clialtf-2, vlist-1)
+nsubj:pass(issued-24, clialtf-2)
+aux(issued-24, will-3)
+cc(welcomed-5, or-4)
+conj:or(will-3, welcomed-5)
+aux(issued-24, welcomed-5)
+case(sharper-8, by-6)
+det(sharper-8, the-7)
+nsubj(tax-10, sharper-8)
+obl:agent(issued-24, sharper-8)
+ref(sharper-8, who-9)
+acl:relcl(sharper-8, tax-10)
+det(chart-17, the-11)
+amod(iurlnr-13, northern-12)
+compound(chart-17, iurlnr-13)
+compound(pilot-16, washington-14)
+compound(pilot-16, nov-15)
+compound(chart-17, pilot-16)
+obj(tax-10, chart-17)
+case(ocean-22, of-18)
+det(ocean-22, the-19)
+compound(ocean-22, north-20)
+amod(ocean-22, pacific-21)
+nmod:of(chart-17, ocean-22)
+aux:pass(issued-24, was-23)
+case(office-29, from-25)
+det(office-29, the-26)
+amod(office-29, lljtlro-27)
+compound(office-29, graphics-28)
+obl:from(issued-24, office-29)
+obl:tmod(issued-24, today-30)
+det(publication-32, this-31)
+nsubj:pass(authorized-34, publication-32)
+nsubj:pass(intended-41, publication-32)
+nsubj:xsubj(aid-43, publication-32)
+aux:pass(authorized-34, was-33)
+parataxis(issued-24, authorized-34)
+det(season-37, the-35)
+amod(season-37, last-36)
+obj(authorized-34, season-37)
+case(congress-39, of-38)
+nmod:of(season-37, congress-39)
+cc(intended-41, and-40)
+parataxis(issued-24, intended-41)
+conj:and(authorized-34, intended-41)
+mark(aid-43, to-42)
+xcomp(intended-41, aid-43)
+amod(mariners-45, western-44)
+obj(aid-43, mariners-45)
+case(those-47, as-46)
+obl:as(aid-43, those-47)
+case(east-50, of-48)
+det(east-50, the-49)
+nmod:of(those-47, east-50)
+aux:pass(assisted-52, are-51)
+dep(reached-62, assisted-52)
+case(chair-57, by-53)
+det(chair-57, the-54)
+compound(chair-57, north-55)
+amod(chair-57, atlantic-56)
+obl:agent(assisted-52, chair-57)
+det(publication-60, the-58)
+amod(publication-60, latter-59)
+nsubj(reached-62, publication-60)
+aux(reached-62, has-61)
+parataxis(issued-24, reached-62)
+nsubj(state-65, it-63)
+amod(state-65, high-64)
+xcomp(reached-62, state-65)
+case(perfection-67, of-66)
+nmod:of(state-65, perfection-67)
+case(cooperation-70, through-68)
+det(cooperation-70, the-69)
+nmod:through(state-65, cooperation-70)
+case(observers-73, of-71)
+compound(observers-73, blood-72)
+nmod:of(cooperation-70, observers-73)
+case(lo-78, on-74)
+det(lo-78, the-75)
+amod(lo-78, pacific-76)
+compound(lo-78, foot-77)
+nmod:on(cooperation-70, lo-78)
+dep(mode-82, beginning-79)
+discourse(mode-82, ha-80)
+cop(mode-82, been-81)
+dep(lo-78, mode-82)
+case(stretch-86, in-83)
+det(stretch-86, the-84)
+amod(stretch-86, great-85)
+nmod:in(mode-82, stretch-86)
+case(miles-89, of-87)
+nummod(miles-89, 1500-88)
+nmod:of(stretch-86, miles-89)
+case(francisco-92, between-90)
+compound(francisco-92, han-91)
+nmod:between(stretch-86, francisco-92)
+cc(yokohama-94, and-93)
+nmod:between(stretch-86, yokohama-94)
+conj:and(francisco-92, yokohama-94)
+det(bit-97, every-95)
+amod(bit-97, obtainable-96)
+dep(mode-82, bit-97)
+case(information-99, of-98)
+nmod:of(bit-97, information-99)
+amod(information-99, interesting-100)
+case(nav1latur-102, to-101)
+obl:to(interesting-100, nav1latur-102)
+case(ulcer-106, given-103)
+case(ulcer-106, with-104)
+amod(ulcer-106, exceeding-105)
+nmod:given(bit-97, ulcer-106)
+case(tail-109, of-107)
+compound(tail-109, de-108)
+nmod:of(ulcer-106, tail-109)
+case(instance-111, for-110)
+nmod:for(bit-97, instance-111)
+amod(instance-111, single-112)
+dep(single-112, floating-113)
+advmod(indicated-115, how-114)
+dep(floating-113, indicated-115)
+advmod(300-117, about-116)
+nummod(miles-118, 300-117)
+obl:npmod(north-119, miles-118)
+advmod(appear-148, north-119)
+mark(thownoff-138, of-120)
+dep(thownoff-138, who-121)
+amod(ulanda-123, hawaiian-122)
+nsubj(thownoff-138, ulanda-123)
+acl(ulanda-123, located-124)
+case(report-126, from-125)
+obl:from(located-124, report-126)
+acl(report-126, made-127)
+mark(set-131, by-128)
+aux:pass(set-131, passing-129)
+advmod(set-131, yes-130)
+advcl:by(made-127, set-131)
+dep(set-131, dated-132)
+case(defelice-136, in-133)
+compound(defelice-136, september-134)
+amod(defelice-136, dangerous-135)
+obl:in(dated-132, defelice-136)
+cop(thownoff-138, is-137)
+csubj(appear-148, thownoff-138)
+det(unit-141, the-139)
+amod(unit-141, japanese-140)
+obj(thownoff-138, unit-141)
+cc(number-143, and-142)
+obj(thownoff-138, number-143)
+conj:and(unit-141, number-143)
+case(menace-145, of-144)
+nmod:of(number-143, menace-145)
+case(navigation-147, to-146)
+obl:to(thownoff-138, navigation-147)
+ccomp(indicated-115, appear-148)
+case(cali-151, near-149)
+det(cali-151, the-150)
+obl:near(appear-148, cali-151)
+dep(averaging-160, forbid-152)
+compound(raft-155, coast-153)
+amod(raft-155, large-154)
+obj(forbid-152, raft-155)
+acl(raft-155, containing-156)
+obj(containing-156, 10000-157)
+aux(averaging-160, is-158)
+dep(averaging-160, each-159)
+parataxis(appear-148, averaging-160)
+amod(feet-162, fit-161)
+obj(averaging-160, feet-162)
+case(length-164, in-163)
+nmod:in(feet-162, length-164)
+cc(inches-166, and-165)
+nmod:in(feet-162, inches-166)
+conj:and(length-164, inches-166)
+case(diameter-168, in-167)
+obl:in(lowed-172, diameter-168)
+nsubj:pass(lowed-172, which-169)
+nsubj:xsubj(sin-177, which-169)
+nsubj:pass(abandoned-187, which-169)
+aux(lowed-172, was-170)
+aux:pass(lowed-172, being-171)
+dep(averaging-160, lowed-172)
+case(wash-175, from-173)
+amod(wash-175, stella-174)
+obl:from(lowed-172, wash-175)
+mark(sin-177, to-176)
+xcomp(lowed-172, sin-177)
+obj(sin-177, franelseo-178)
+aux(breaking-180, began-179)
+dep(sin-177, breaking-180)
+compound:prt(breaking-180, up-181)
+nmod:poss(gale-183, its-182)
+obj(breaking-180, gale-183)
+cc(abandoned-187, and-184)
+aux:pass(abandoned-187, was-185)
+advmod(abandoned-187, finally-186)
+dep(averaging-160, abandoned-187)
+conj:and(lowed-172, abandoned-187)
+case(oct-189, on-188)
+obl:on(abandoned-187, oct-189)
+obj(abandoned-187, 10-190)
+case(reports-194, according-191)
+fixed(according-191, to-192)
+amod(reports-194, lit-193)
+nmod:according_to(10-190, reports-194)
+acl(reports-194, hadnntrong-195)
+compound(drift-198, part-196)
+amod(drift-198, northern-197)
+obj(hadnntrong-195, drift-198)
+cc(igni-203, and-199)
+nsubj(igni-203, it-200)
+aux(igni-203, will-201)
+advmod(igni-203, probably-202)
+dep(averaging-160, igni-203)
+conj:and(lowed-172, igni-203)
+aux(ahora-205, must-204)
+dep(igni-203, ahora-205)
+case(island-208, of-206)
+compound(island-208, vancouver-207)
+obl:of(ahora-205, island-208)
+advmod(igni-203, really-209)
+
+Extracted the following NER entity mentions:
+washington	STATE_OR_PROVINCE	-
+nov	DATE	DATE:-1.0
+pilot	TITLE	-
+today	DATE	DATE:-1.0
+1500	DATE	DATE:0.7931477950797643
+ulcer	CAUSE_OF_DEATH	-
+300	NUMBER	NUMBER:-1.0
+september	DATE	DATE:0.9985006292225336
+japanese	NATIONALITY	MISC:0.9995403932990385
+cali	MISC	MISC:0.8653751479218422
+10000	NUMBER	NUMBER:-1.0
+oct 10	DATE	DATE:-1.0
+
+Coreference set:
+	(1,200,[200,201]) -> (1,94,[93,95]), that is: "it" -> "and yokohama"
+
+Coreference set:
+	(1,182,[182,183]) -> (1,63,[63,64]), that is: "its" -> "it"
