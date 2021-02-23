@@ -66,9 +66,8 @@ lst_values_for_anal<- list()
 
 number_of_names=length(lst_names)
 lst_person_id<- list()
-
+#ERROR IS HERE
 for (rowname in lst_rownames){
- 
   counter=0
   personcounter=number_of_names
   for (val in get(eval(rowname))){
@@ -80,11 +79,15 @@ for (rowname in lst_rownames){
         assign(as.String(lst_names[counter]), personcounter+counter)
       }
       lst_names_for_anal=append(eval(as.String(lst_names[counter])), lst_names_for_anal)
-      lst_values_for_anal=append(as.integer(counter), lst_values_for_anal)
+      lst_values_for_anal=append(as.integer(str_remove(rowname,"V")), lst_values_for_anal)
+      print(str_remove(rowname,"V"))
     }
   }
 }
-
+#ATTEMPT TO TAKE EACH V VARIABLE AND ASSIGN THE NAME
+for (name in lst_rownames){
+  print(name)
+}
 df2 <- data.table(person_id=unlist(lst_names_for_anal), ngram_id=unlist(lst_values_for_anal))
 
 #Perform Birank
@@ -93,9 +96,9 @@ br_birank(df2)
 #TEST
 #Extract the ngram names
 #br_birank(df)
-df2 <- data.table(
-  patient_id = sample(x = 1:10000, size = 10000, replace = TRUE),
-  provider_id = sample(x = 1:5000, size = 10000, replace = TRUE)
+df3 <- data.table(
+  patient_id = sample(x = 1:10, size = 10, replace = TRUE),
+  provider_id = sample(x = 1:10, size = 10, replace = TRUE)
 )
-br_birank(df2)
-
+br_birank(df3)
+sample(x = 1:100, size = 10, replace = TRUE)
