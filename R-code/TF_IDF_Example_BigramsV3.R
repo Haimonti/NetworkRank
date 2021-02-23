@@ -84,11 +84,51 @@ for (rowname in lst_rownames){
     }
   }
 }
-#ATTEMPT TO TAKE EACH V VARIABLE AND ASSIGN THE NAME
-for (name in lst_rownames){
+#NEED TO LOOK AT NGRAM WEIGHTS AND ADD TO EACH INDIVIDUAL
+file="mymatrix.txt"
+tbl_names=read.table(file, nrows=1, header = FALSE, sep = " ", dec = ".")
+tbl=read.table(file, skip=1, header = FALSE, sep = " ", dec = ".")
+rm(file)
+lst_names=as.list(tbl_names)
+lst_names=prepend(lst_names,"N-Gram")
+colnames(tbl)=c(lst_names)
+df_tbl_with_Weights=as.data.frame(tbl)
+lst_names[1]<- NULL
+
+lst_weights_for_anal<- list()
+for ( name in lst_names){
+  counter=0
   print(name)
+  assign(name, list())
+  assign( name,df_tbl_with_Weights[[name]])
 }
-df2 <- data.table(person_id=unlist(lst_names_for_anal), ngram_id=unlist(lst_values_for_anal))
+for (name in lst_names){
+  for (weight in get(eval(name))){
+    if(as.integer(weight) != 0){
+      lst_weights_for_anal=append(weight, lst_weights_for_anal)
+    }
+  }
+}
+
+lst_names_for_anal=list()
+ngram_id=list()
+lst_weights_for_anal=list()
+for (name in lst_names){
+  counter=0
+    for (weight in get(eval(name))){
+      counter=counter+1
+    if(as.integer(weight) != 0){
+      lst_names_for_anal<-append(name,lst_names_for_anal)
+      ngram_id<-append(counter,ngram_id)
+      lst_weights_for_anal<-append(weight,lst_weights_for_anal)
+      print(name)
+      print(weight)
+    }
+  }
+}
+
+df2 <- data.table(person_id=unlist(lst_names_for_anal), ngram_id=unlist(ngram_id), weight=unlist(lst_weights_for_anal))
+
 
 #Perform Birank
 br_birank(df2)
