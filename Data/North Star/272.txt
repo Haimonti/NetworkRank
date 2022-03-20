@@ -1,0 +1,2 @@
+{"/service/sgp/sgpbatches/batch_dlc_aster_ver01/data/sn84026365/print/1849040701/0006.xml":{"error":"[Errno 2] No such file or directory: u'/service/sgp/sgpbatches/batch_dlc_aster_ver01/data/sn84026365/print/1849040701/0006.xml'"}}
+
